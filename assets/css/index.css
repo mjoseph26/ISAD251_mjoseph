@@ -1,0 +1,165 @@
+#home
+{
+    text-align: center;
+}
+
+#demo
+{
+    background-color: rgba(0,0,0,0.7);
+}
+
+.carousel-inner image
+{
+    opacity: 0.6;
+}
+
+#myModal
+{
+    margin-top:70px;
+}
+
+.modal-content h4
+{
+    margin-left: 100px;
+}
+
+.bg-custom{
+    background-color: rgba(0,0,0,0.6);
+    color:white;
+}
+
+h1{
+    font-family: Lobster,cursive;
+}
+
+.carousel-caption{
+    position:absolute;
+    top:35%;
+}
+
+.carousel-caption h1{
+    font-size:500%;
+    text-shadow: 5px 5px 40px #000;
+}
+
+#about
+{
+    text-align: center;
+}
+
+#business-info
+{
+    margin-top: 20px;
+    margin-bottom:20px;
+}
+
+.jumbotron-fluid image
+{
+    margin: 0 auto;
+    max-width:100%;
+    height:auto;
+}
+
+.card-body h1
+{
+    text-align: center;
+}
+
+.card-body hr
+{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#price
+{
+    float:right
+}
+
+.font-weight-bold
+{
+    text-align: left;
+}
+
+#description
+{
+    text-align:left;
+}
+
+#contact
+{
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+#map and social
+{
+    padding-top: 30px;
+}
+
+#mapid
+{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.social padding
+{
+    margin-bottom: 40px;
+}
+
+
+.social a{
+    font-size:60px;
+    padding:50px;
+}
+
+.fa-facebook{
+    color:#3b5998;
+}
+
+.fa-envelope{
+    color:#dd4b39;
+}
+
+.fa-instagram{
+    color:#517fa4;
+}
+
+.fa-twitter{
+    color:#00aced;
+}
+
+#mapid{
+    height: 250px;
+}
+
+
+
+hr.light{
+    width:75%;
+    margin-top:.8rem;
+    margin-bottom:1rem;
+}
+
+#bottom{
+    margin-top:30px;
+}
+
+
+#business-title{
+    font-family: Lobster,cursive;
+}
+
+#open-hours{
+    margin-top:40px;
+}
+
+#hour-list{
+    display: inline-block;
+}
+
+#footer-titles{
+    margin-left: 220px;
+    margin-top: 30px;
+}
