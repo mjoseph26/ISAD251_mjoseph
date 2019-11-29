@@ -32,12 +32,12 @@
                     <option>--Select Table--</option>
                     <?php
                     $optionString = "";
-                    $customers = $db->Customers();
+                    $tables = $db->tableSelector();
 
-                    if ($customers) {
-                        foreach ($customers as $customer)
+                    if ($tables) {
+                        foreach ($tables as $table)
                         {
-                            $optionString.=  "<option value=".$customer->getCustomer().">".$customer->Table()."</option>";
+                            $optionString.= "<option>".$table['TableNo']."</option>";
                         }
                     }
                     echo $optionString;

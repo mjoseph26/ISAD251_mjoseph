@@ -74,6 +74,18 @@ class DBContext
 
     }
 
+    public function tableSelector()
+    {
+        $sql = "SELECT DISTINCT `TableNo` FROM `customer`";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+
+    }
+
+
+
 
 
 
