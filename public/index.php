@@ -1,5 +1,11 @@
 <?php
 include_once 'header.php';
+include_once '../src/model/DbContext.php';
+
+if(!isset($db))
+{
+    $db = new DbContext();
+}
 ?>
 
 <!DOCTYPE html>
@@ -90,82 +96,22 @@ include_once 'header.php';
         <h1 class="card-title">Menu</h1>
         <hr>
 
-        <div class="item1">
-            <p id="price">£15.00</p>
-            <h5 class="font-weight-bold">Chai</h5>
-            <p id="description">
-                <i>
-                    Combination of black tea,steamed milk and various Indian herbs and spices
-                </i>
-            </p>
-        </div>
+        <?php
+        $listString = "";
+        $products = $db->Products();
+        $className = 1;
 
-        <div class="item2">
-            <p id="price">£20.00</p>
-            <h5 class="font-weight-bold">Yerba Mate</h5>
-            <p id="description">
-                <i>
-                    Energising South American tea made from holly leaves
-                </i>
-            </p>
-        </div>
-
-        <div class="item3">
-            <p id="price">£30.00</p>
-            <h5 class="font-weight-bold">Pau d' arco</h5>
-            <p id="description"><i>
-                    Tea made from the taheebo herb found in the Amazon rainforest
-                </i>
-            </p>
-        </div>
-
-        <div class="item4">
-            <p id="price">£15.00</p>
-            <h5 class="font-weight-bold">Chamomile</h5>
-            <p id="description">
-                <i>A relaxing and fragrant drink made from the chamomile flowers</i>
-            </p>
-        </div>
-
-        <div class="item5">
-            <p id="price">£10.00</p>
-            <h5 class="font-weight-bold">Oolong</h5>
-            <p id="description">
-                <i>
-                    A tea with proven health benefits sourced from the leaves of the camellia sinensis plant
-                </i>
-            </p>
-        </div>
-
-        <div class="item6">
-            <p id="price">£25.00</p>
-            <h5 class="font-weight-bold">Pu-erh</h5>
-            <p id="description">
-                <i>
-                    Chinese tea produced through microbial fermentation from green and black tea  leaves
-                </i>
-            </p>
-        </div>
-
-        <div class="item7">
-            <p id="price">£50.00</p>
-            <h5 class="font-weight-bold">Moringa</h5>
-            <p id="description">
-                <i>
-                    A subtle and earthy tea made from the moringa plant native to the Himalayas.
-                </i>
-            </p>
-        </div>
-
-        <div class="item8">
-            <p id="price">£25.00</p>
-            <h5 class="font-weight-bold">Peppermint</h5>
-            <p id="description">
-                <i>
-                    A fresh,bold and flavourful tea created from the leaves of peppermint plant.
-                </i>
-            </p>
-        </div>
+        if($products)
+        {
+            foreach($products as $product)
+            {
+                $listString.="<div class=item".$className.">"."<p id=price>"."£".$product->getPrice()."</p>"."<h5 class='font-weight-bold'>".$product->getName()."</h5>".
+                    "<p id='description'>"."<i>".$product->getDescription()."</i>"."</p>"."</div>";
+                $className += 1;
+            }
+        }
+        echo $listString;
+        ?>
     </div>
 </div>
 
