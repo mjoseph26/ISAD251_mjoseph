@@ -7,13 +7,17 @@ class product
     private $price;
     private $stock;
 
-    public function __construct($prod_id,$prod_name,$desc,$prod_price,$amtStock)
+    public function __construct($prod_name,$desc,$prod_price,$amtStock)
     {
-        $this->id = $prod_id;
         $this->name = $prod_name;
         $this->description = $desc;
         $this->price = $prod_price;
         $this->stock = $amtStock;
+    }
+
+    public function setID($productID)
+    {
+        $this->id = $productID;
     }
 
     public function getID()

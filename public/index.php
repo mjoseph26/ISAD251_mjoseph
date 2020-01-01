@@ -4,8 +4,9 @@ include_once '../src/model/DbContext.php';
 
 if(!isset($db))
 {
-    $db = new DbContext();
+    $db = new DBContext();
 }
+
 ?>
 
 <!DOCTYPE html>
