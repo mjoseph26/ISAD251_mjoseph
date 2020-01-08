@@ -49,7 +49,7 @@ $productList = $db->Products();
             </div>
             <div class="form-group">
                 <label for="productPrice">Product Price:</label>
-                <input type="text" class="form-control" name="product-price" id="order" placeholder="Price(£)" required>
+                <input type="number" step="0.01" min="0" class="form-control inputValidation" name="product-price" id="order" placeholder="Price(£)" required>
             </div>
 
             <button type="submit" class="btn btn-primary" name="add_new_item">Add</button>
