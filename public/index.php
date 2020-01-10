@@ -12,6 +12,7 @@ if(!isset($db))
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" href="../assets/css/index.css">
+    <title>Home page, where the information about the tea room is provided</title>
 </head>
 
 <body>
@@ -49,7 +50,7 @@ if(!isset($db))
                         <div class="modal-body">
 
                             <a href="Order.php" class="btn btn-primary">Customer</a>
-                            <a href="Order.php" class="btn btn-primary">Administrator</a>
+                            <a href="admin.php" class="btn btn-primary">Administrator</a>
 
 
                         </div>

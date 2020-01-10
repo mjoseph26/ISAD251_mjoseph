@@ -4,7 +4,7 @@ date_default_timezone_set('Europe/London');
 <!DOCTYPE html>
 <head>
 <link rel="stylesheet" href="../assets/css/footer.css">
-
+<title>Page holding the footer</title>
 </head>
 <body>
 <div class="footer text-center bg-light">

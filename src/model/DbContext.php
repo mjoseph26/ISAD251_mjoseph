@@ -73,6 +73,16 @@ class DBContext
 
     }
 
+    public function jsonProducts()
+    {
+        $sql = "SELECT * FROM `product`";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $resultSet = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $resultSet;
+    }
+
+
     public function Orders()
     {
         $sql = "SELECT * FROM `order`";
@@ -200,7 +210,7 @@ class DBContext
 
     public function setTime($orderId)
     {
-        //UPDATE `order` SET OrderTime=NOW() WHERE `order`.`OrderId` = AorderNumber;
+
         $sql = "CALL SetTime(:OrderNo)";
         $statement = $this->connection->prepare($sql);
         $statement->bindParam(':OrderNo',$orderId,PDO::PARAM_INT);

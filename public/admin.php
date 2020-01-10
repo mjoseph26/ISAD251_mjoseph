@@ -31,7 +31,9 @@ $productList = $db->Products();
 ?>
 
 <!DOCTYPE html>
-<head></head>
+<head>
+    <title>Admin page - where admin specific functionalities can be found</title>
+</head>
 <body>
 <div class="card col-md-10 mx-auto" style="margin-top:30px; margin-bottom: 30px;">
     <div class="card-header bg-primary text-white">
@@ -113,7 +115,6 @@ $productList = $db->Products();
 
                 </tbody>
             </table>
-            <button type="submit" class="btn btn-primary" name="submit_view_request">View</button>
         </form>
     </div>
 </div>

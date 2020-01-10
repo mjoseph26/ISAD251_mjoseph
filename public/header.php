@@ -31,6 +31,7 @@
     <!-- CSS stylesheet for this page -->
     <link rel="stylesheet" href="../assets/css/header.css">
 
+    <title>Page holding the header uniform to the whole application</title>
 </head>
 
 <body>
